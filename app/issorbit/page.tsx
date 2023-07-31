@@ -34,6 +34,9 @@ export default function ISSOrbit() {
       };
 
       p.draw = () => {
+        w = Math.min(window.innerWidth * 0.9, window.innerWidth - 50);
+        h = Math.min(window.innerHeight * 0.9, window.innerHeight - 75);
+        p.resizeCanvas(w, h);
         // One second = one hour
         var scale = (r * 2) / Math.min(h - 100, w - 100);
 
@@ -98,11 +101,11 @@ export default function ISSOrbit() {
         }
       };
 
-      window.addEventListener("resize", () => {
-        w = Math.min(window.innerWidth * 0.9, window.innerWidth - 50);
-        h = Math.min(window.innerHeight * 0.9, window.innerHeight - 75);
-        p.resizeCanvas(w, h);
-      });
+      // window.addEventListener("resize", () => {
+      //   w = Math.min(window.innerWidth * 0.9, window.innerWidth - 50);
+      //   h = Math.min(window.innerHeight * 0.9, window.innerHeight - 75);
+      //   p.resizeCanvas(w, h);
+      // });
     });
   }, []);
 
