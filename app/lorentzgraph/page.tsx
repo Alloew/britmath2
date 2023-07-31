@@ -25,8 +25,8 @@ export default function LorentzGraph() {
       yaxis: {
         title: "Relativity Gamma",
       },
-      width: window.innerWidth,
-      height: window.innerHeight,
+      width: document.documentElement.clientWidth,
+      height: document.documentElement.clientHeight,
     };
 
     const chart = new Chart(document.getElementById("graph"), {
