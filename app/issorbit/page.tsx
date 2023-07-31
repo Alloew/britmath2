@@ -22,8 +22,14 @@ export default function ISSOrbit() {
 
       var img;
 
-      var w = Math.min(window.innerWidth * 0.9, window.innerWidth - 50);
-      var h = Math.min(window.innerHeight * 0.9, window.innerHeight - 75);
+      var w = Math.min(
+        document.documentElement.clientWidth * 0.9,
+        document.documentElement.clientWidth - 50
+      );
+      var h = Math.min(
+        document.documentElement.clientHeight * 0.9,
+        document.documentElement.clientHeight - 75
+      );
 
       p.preload = () => {
         img = p.loadImage("e.png");
@@ -34,8 +40,14 @@ export default function ISSOrbit() {
       };
 
       p.draw = () => {
-        w = Math.min(window.innerWidth * 0.9, window.innerWidth - 50);
-        h = Math.min(window.innerHeight * 0.9, window.innerHeight - 75);
+        w = Math.min(
+          document.documentElement.clientWidth * 0.9,
+          document.documentElement.clientWidth - 50
+        );
+        h = Math.min(
+          document.documentElement.clientHeight * 0.9,
+          document.documentElement.clientHeight - 75
+        );
         p.resizeCanvas(w, h);
         // One second = one hour
         var scale = (r * 2) / Math.min(h - 100, w - 100);
@@ -102,8 +114,8 @@ export default function ISSOrbit() {
       };
 
       // window.addEventListener("resize", () => {
-      //   w = Math.min(window.innerWidth * 0.9, window.innerWidth - 50);
-      //   h = Math.min(window.innerHeight * 0.9, window.innerHeight - 75);
+      //   w = Math.min(document.documentElement.clientWidth * 0.9, document.documentElement.clientWidth - 50);
+      //   h = Math.min(document.documentElement.clientHeight * 0.9, document.documentElement.clientHeight - 75);
       //   p.resizeCanvas(w, h);
       // });
     });
