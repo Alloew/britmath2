@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground: hsl(230, 12%, 95%);
+  --background-start: hsl(230, 12%, 13%);
+  --background-end: hsl(230, 12%, 11%);
+}
+
+body {
+  color: var(--foreground);
+  background: linear-gradient(
+    to bottom,
+    var(--background-start),
+    var(--background-end)
+  );
+}
